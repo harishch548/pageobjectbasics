@@ -23,7 +23,7 @@ public class Utilities extends Page {
 
 		Date d = new Date();
 		screenshotName = "_"+d.toString().replace(":", "_").replace(" ", "_") + ".jpg";
-		screenshotpath = System.getProperty(("user.dir")) + "\\target\\surefire-reports\\html\\" +methodName + screenshotName;
+		screenshotpath = System.getProperty("user.dir") + "\\target\\surefire-reports\\html\\" +methodName + screenshotName;
 		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(srcFile,new File(screenshotpath));
 
