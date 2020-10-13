@@ -2,6 +2,7 @@ package com.google.testcases;
 
 import java.util.Hashtable;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.google.base.Page;
@@ -20,6 +21,7 @@ public class CreateAccountTest {
 		AccountsPage account = Page.menu.gotoAccounts();
 		CreateAccountPage cap = account.gotoCreateAccount();
 		cap.createAccount(data.get("accountname"));
+		Assert.fail();
 
 	}
 }
